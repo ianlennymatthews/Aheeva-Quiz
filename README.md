@@ -36,5 +36,5 @@
 
 ## Tools-Used
 
-- Front-End: React, Toastify, Axios, Awesome Button
+- Front-End: React, Toastify, Axios, Bootstrap, Awesome Button
 - Back-End: Node, Express, Axios
