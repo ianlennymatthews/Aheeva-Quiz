@@ -465,19 +465,19 @@
        "category":"Entertainment: Video Games",
        "options":[
           {
-             "value":"Hector &quot;Ming&quot; Domingo",
+             "value":"Hector 'Ming' Domingo",
              "isCorrect":false
           },
           {
-             "value":"Toru &quot;Bull&quot; Sato",
+             "value":"Toru 'Bull' Sato",
              "isCorrect":false
           },
           {
-             "value":"Karl &quot;Baron&quot; Smit",
+             "value":"Karl 'Baron' Smit",
              "isCorrect":false
           },
           {
-             "value":"Clarence &quot;Razor&quot; Callahan",
+             "value":"Clarence 'Razor' Callahan",
              "isCorrect":true
           }
        ]
@@ -1190,7 +1190,7 @@
              "isCorrect":false
           },
           {
-             "value":"&Uuml;ber Update",
+             "value":"Über Update",
              "isCorrect":true
           }
        ]

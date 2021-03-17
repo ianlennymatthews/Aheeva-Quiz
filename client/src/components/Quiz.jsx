@@ -120,9 +120,16 @@ const Quiz = () => {
   }, []);
 
   useEffect(() => {
-    //If it is ever the case the user really likes the game and runs out of questions, reset them
-    setQuestionIds([...Array(100).keys()]);
-  }, questionIds.length === 1);
+    //If it is ever the rare case the user really likes the game and runs out of questions
+    if (questionIds.length === 0) {
+      //Thank them
+      alert(
+        "Thanks for playing!, you've answered all of the 100 questions correctly!"
+      );
+      //Reset the questions and see if they're willing to go double or nothing
+      setQuestionIds([...Array(100).keys()]);
+    }
+  }, [questionIds]);
 
   return (
     <>
@@ -134,7 +141,7 @@ const Quiz = () => {
             <div id="quiz-container">
               <div>
                 <div style={{ textAlign: 'center' }}>{currentScore}</div>
-                <div style={{ textAlign: 'center' }}>
+                <div style={{ textAlign: 'center' }} className="my-1">
                   {currentQuestion.question.replace(/&quot;/g, '"')}
                 </div>
               </div>
