@@ -34,10 +34,6 @@
 >    -- You may start the server via`npm start` for production
 >    -- The server uses port 3002 by default!
 
-#### Testing
-
-> Run the implemented tests with the command 'npm run test'!
-
 ## Tools-Used
 
 - Front-End: React, Toastify, Axios, Awesome Button
