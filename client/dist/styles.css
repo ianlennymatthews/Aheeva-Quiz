@@ -21,11 +21,20 @@ body {
   position: absolute;
 }
 
-#answer-container {
-  text-align: center;
+.quiz-question-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
 }
 
-#question-container {
+#submit-container {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+#answers-container {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
@@ -33,9 +42,11 @@ body {
   justify-content: space-evenly;
 }
 
-.quiz-question-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: white;
+#game-over-container {
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+#game-over-container > * {
+  margin: 1rem;
 }

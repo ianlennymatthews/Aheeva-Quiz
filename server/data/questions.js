@@ -451,7 +451,7 @@ module.exports =  [{
         value: "Polszka",
         isCorrect: false
     }, {
-        value: "P&oacute;land",
+        value: "PÓland",
         isCorrect: false
     }, {
         value: "Polska",
