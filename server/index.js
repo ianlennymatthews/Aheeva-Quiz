@@ -28,7 +28,6 @@ app.get('/question', (req, res) => {
 
 app.post('/validate', (req, res) => {
   let { answer } = req.body;
-  console.log(answer);
   for (let option of currentQuestion.options) {
     if (option.value === answer) {
       res.send(option.isCorrect);
