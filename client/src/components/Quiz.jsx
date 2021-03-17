@@ -9,8 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import GameOver from './GameOver.jsx';
 
 const Quiz = () => {
-  const idArray = [...Array(100).keys()]; //[0,1,...99]
-  const [questionIds, setQuestionIds] = useState(idArray);
+  const [questionIds, setQuestionIds] = useState([...Array(100).keys()]); //[0,1,...99]
   const [currentQuestion, setCurrentQuestion] = useState({});
   const [currentAnswer, setCurrentAnswer] = useState('');
   const [currentScore, setCurrentScore] = useState(0);
@@ -119,6 +118,11 @@ const Quiz = () => {
         console.error(err);
       });
   }, []);
+
+  useEffect(() => {
+    //If it is ever the case the user really likes the game and runs out of questions, reset them
+    setQuestionIds([...Array(100).keys()]);
+  }, questionIds.length === 1);
 
   return (
     <>
