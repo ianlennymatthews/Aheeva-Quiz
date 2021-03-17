@@ -107,7 +107,7 @@ const Quiz = () => {
               );
             })}
           </div>
-          <div>
+          <div id="answer-container">
             {currentAnswer !== '' ? (
               <AwesomeButton type="secondary" size="medium" disabled>
                 {currentAnswer.replace(/&quot;/g, '"')}

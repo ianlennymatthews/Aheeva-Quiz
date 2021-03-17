@@ -22,7 +22,7 @@ body {
 }
 
 #answer-container {
-  align-items: center;
+  text-align: center;
 }
 
 #question-container {
