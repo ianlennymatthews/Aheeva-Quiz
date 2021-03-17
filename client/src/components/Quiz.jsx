@@ -16,6 +16,7 @@ const Quiz = () => {
   const [currentScore, setCurrentScore] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
   const [gameOver, setGameOver] = useState(false);
+  const [isButtonDisabled, setisButtonDisabled] = useState(false);
 
   const randomId = () => {
     return Math.floor(Math.random() * questionIds.length);
@@ -35,6 +36,7 @@ const Quiz = () => {
       .then(data => {
         let temp = [...questionIds];
         temp.splice(newQuestionId, 1);
+        setisButtonDisabled(false);
         setQuestionIds(temp);
         setCurrentQuestion(data.data);
         setCurrentAnswer('');
@@ -56,6 +58,8 @@ const Quiz = () => {
         progress: undefined
       });
     } else {
+      setisButtonDisabled(true);
+
       axios
         .post('/validate', { answer: currentAnswer })
         .then(data => {
@@ -74,6 +78,7 @@ const Quiz = () => {
                   .then(data => {
                     let temp = [...questionIds];
                     temp.splice(newQuestionId, 1);
+                    setisButtonDisabled(false);
                     setQuestionIds(temp);
                     setCurrentQuestion(data.data);
                     setCurrentAnswer('');
@@ -152,6 +157,7 @@ const Quiz = () => {
                   ) : null}
                   <AwesomeButton
                     type="secondary"
+                    disabled={isButtonDisabled}
                     onPress={() => validateAnswer()}
                   >
                     Submit your answer!
