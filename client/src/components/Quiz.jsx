@@ -23,7 +23,7 @@ const Quiz = () => {
   const validateAnswer = () => {
     if (currentAnswer === '') {
       toast.warning('⚠️ Please select an answer first', {
-        position: 'top-right',
+        position: toast.POSITION.TOP_RIGHT,
         autoClose: 1800,
         hideProgressBar: false,
         closeOnClick: true,
@@ -110,7 +110,7 @@ const Quiz = () => {
           <div>
             {currentAnswer !== '' ? (
               <AwesomeButton type="secondary" size="medium" disabled>
-                {currentAnswer}
+                {currentAnswer.replace(/&quot;/g, '"')}
               </AwesomeButton>
             ) : null}
             <AwesomeButton type="secondary" onPress={() => validateAnswer()}>

@@ -19,13 +19,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //Current Question
 let currentQuestion = {};
 
-//GET REQUEST
+//Get REQUEST
 app.get('/question', (req, res) => {
   let { id } = req.query;
   currentQuestion = Questions[id];
   res.send(currentQuestion);
 });
 
+//Post Request
 app.post('/validate', (req, res) => {
   let { answer } = req.body;
   for (let option of currentQuestion.options) {
