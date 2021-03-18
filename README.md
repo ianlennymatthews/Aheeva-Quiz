@@ -11,11 +11,18 @@
 
 ### Description:
 
+This is a small mostly front end app that presents quiz like questions to the user!
+Try to see how many correct trivia questions you can answer in a row!
+
+Trivia Questions sourced from [Open Trivia DB](https://opentdb.com/api_config.php)
+
 ## Requirements
 
 - Node v10.13.0 (LTS as of May 2019) or higher
 
 ## Usage
+
+![Alt Text](https://gifyu.com/image/aecl)
 
 #### Client
 
