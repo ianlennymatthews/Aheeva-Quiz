@@ -22,7 +22,7 @@ Trivia Questions sourced from [Open Trivia DB](https://opentdb.com/api_config.ph
 
 ## Usage
 
-![Alt Text](https://gifyu.com/image/aecl)
+![Alt Text](https://s4.gifyu.com/images/Aheeva.gif)
 
 #### Client
 
