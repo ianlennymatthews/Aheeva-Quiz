@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AwesomeButton } from 'react-awesome-button';
-import 'react-awesome-button/dist/styles.css';
+import 'react-awesome-button/dist/themes/theme-rickiest.css';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
@@ -35,6 +35,7 @@ const Quiz = () => {
       .then(data => {
         let temp = [...questionIds];
         temp.splice(newQuestionId, 1);
+
         setisButtonDisabled(false);
         setQuestionIds(temp);
         setCurrentQuestion(data.data);
@@ -77,6 +78,7 @@ const Quiz = () => {
                   .then(data => {
                     let temp = [...questionIds];
                     temp.splice(newQuestionId, 1);
+
                     setisButtonDisabled(false);
                     setQuestionIds(temp);
                     setCurrentQuestion(data.data);
@@ -104,6 +106,7 @@ const Quiz = () => {
   };
 
   useEffect(() => {
+    //Initial data fetch
     let questionId = randomId();
     getQuestion(questionId)
       .then(data => {
@@ -152,7 +155,10 @@ const Quiz = () => {
                       key={i}
                       className="quiz-question-item"
                       type="primary"
-                      onPress={() => handleSelect(question.value)}
+                      onPress={() => {
+                        console.log(this);
+                        handleSelect(question.value);
+                      }}
                     >
                       {question.value}
                     </AwesomeButton>
@@ -162,11 +168,12 @@ const Quiz = () => {
               <div id="submit-container" className="my-3">
                 <div>
                   {currentAnswer !== '' ? (
-                    <AwesomeButton type="secondary" size="medium" disabled>
+                    <AwesomeButton className="mx-1" type="secondary" disabled>
                       {currentAnswer.replace(/&quot;/g, '"')}
                     </AwesomeButton>
                   ) : null}
                   <AwesomeButton
+                    className="mx-1"
                     type="secondary"
                     disabled={isButtonDisabled}
                     onPress={() => validateAnswer()}

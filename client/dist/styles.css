@@ -32,6 +32,7 @@ body {
   display: flex;
   text-align: center;
   justify-content: space-evenly;
+  align-items: center;
 }
 
 #answers-container {
@@ -49,4 +50,8 @@ body {
 
 #game-over-container > * {
   margin: 1rem;
+}
+
+.aws-btn--disabled span {
+  text-decoration: none;
 }
