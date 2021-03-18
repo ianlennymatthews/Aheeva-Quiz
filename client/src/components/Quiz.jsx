@@ -155,10 +155,7 @@ const Quiz = () => {
                       key={i}
                       className="quiz-question-item"
                       type="primary"
-                      onPress={() => {
-                        console.log(this);
-                        handleSelect(question.value);
-                      }}
+                      onPress={() => handleSelect(question.value)}
                     >
                       {question.value}
                     </AwesomeButton>

@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //Current Question
 let currentQuestion = {};
 
-//Get REQUEST
+//Get Request
 app.get('/question', (req, res) => {
   let { id } = req.query;
   currentQuestion = Questions[id];
