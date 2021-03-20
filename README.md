@@ -1,4 +1,4 @@
-# Project Overview: Aheeva-Technical-Task
+# Project Overview: Quiz-Me!
 
 ## Table of Contents
 
